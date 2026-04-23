@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enter.exe</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="screen">
+    <section id="boot-screen" class="panel visible" aria-live="polite">
+      <div class="win95-window" role="dialog" aria-labelledby="error-title" aria-modal="true">
+        <div class="win95-titlebar">
+          <span id="error-title">Warning</span>
+          <span class="title-buttons" aria-hidden="true">□ ✕</span>
+        </div>
+        <div class="win95-body">
+          <p class="error-icon" aria-hidden="true">⚠</p>
+          <div class="error-text">
+            <p class="error-head">Vibe Coding</p>
+            <p>Enter.exe initiated. Exit.exe not found.</p>
+          </div>
+        </div>
+        <div class="win95-actions">
+          <button id="enter-btn" class="win95-btn">Enter</button>
+          <button class="win95-btn" disabled aria-disabled="true">Cancel</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="install-screen" class="panel" aria-live="polite">
+      <div class="terminal-wrap">
+        <div class="terminal-header">SYSTEM PATCHER v0.95</div>
+        <div class="progress-wrap">
+          <div id="progress-bar" class="progress-bar"></div>
+        </div>
+        <p id="progress-label" class="progress-label">Initializing...</p>
+        <pre id="install-log" class="install-log"></pre>
+      </div>
+    </section>
+
+    <section id="mode-screen" class="panel" aria-live="polite">
+      <div class="mode-card">
+        <div class="mode-header">
+          <p class="mode-eyebrow">── KNOOB ACADEMY &nbsp;·&nbsp; VIBE CODING COURSE ──</p>
+          <h2 class="mode-title">SCHWIERIGKEITSGRAD</h2>
+          <p class="mode-sub">Wähle deinen Pfad. Weise wählt nur einer.</p>
+          <hr class="mode-divider">
+        </div>
+        <ul class="mode-list" id="mode-options" role="list">
+          <li>
+            <button class="mode-btn" data-mode="lehrling">
+              <span class="mode-name">LEHRLING</span>
+              <span class="mode-hint">Slop noch erlaubt</span>
+            </button>
+          </li>
+          <li>
+            <button class="mode-btn" data-mode="ritter">
+              <span class="mode-name">RITTER</span>
+              <span class="mode-hint">Halb dabei</span>
+            </button>
+          </li>
+          <li>
+            <button class="mode-btn" data-mode="meister">
+              <span class="mode-name">MEISTER</span>
+              <span class="mode-hint">Kein Erbarmen</span>
+            </button>
+          </li>
+          <li>
+            <button class="mode-btn mode-btn--ordentlich" data-mode="ordentlich">
+              <span class="mode-name">ORDENTLICH</span>
+              <span class="mode-hint">Es gibt keinen anderen Weg</span>
+            </button>
+          </li>
+        </ul>
+        <p class="mode-cursor-hint">[ Wählen mit Mausklick ]</p>
+      </div>
+    </section>
+
+    <section id="quest-screen" class="panel" aria-live="polite">
+      <article class="quest-card">
+        <h1 class="quest-part part-title">Willkommen junge*r Codawan.</h1>
+        <p class="quest-giver quest-part part-meta">Programm aktiv: YodAI.exe</p>
+        <p id="mindwash-status" class="mindwash-status quest-part part-status">Systemstatus: preparing narrative shell...</p>
+        <div class="dialog-box quest-part part-dialog">
+          <p id="dialog-line"></p>
+        </div>
+        <button id="next-btn" class="quest-btn quest-part part-button">Weiter</button>
+        <div id="consent-prompt" class="consent-prompt quest-part part-button" aria-live="polite">
+          <p>[Y/N] clean prompt discipline accepted?</p>
+          <div class="consent-actions">
+            <button id="consent-yes" class="quest-btn">Y</button>
+            <button id="consent-no" class="quest-btn" disabled aria-disabled="true">N</button>
+          </div>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <aside id="bsod-burst" class="bsod-burst" aria-hidden="true">
+    <p>*** STOP: 0x0000C0DAWAN</p>
+    <p>YodAI recovered from a critical containment breach.</p>
+    <p>Collecting panic dump... OK</p>
+  </aside>
+
+  <aside id="blackout-screen" class="blackout-screen" aria-hidden="true">
+    <p>signal lost...</p>
+    <p>restoring consciousness channel...</p>
+  </aside>
+
+  <script src="script.js"></script>
+</body>
+</html>
